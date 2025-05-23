@@ -1,16 +1,37 @@
-# nickthelegend's ticket-nft
+# NFT Event Ticketing Platform
+This is a Next.js application built to modernize event ticketing through the use of NFTs and blockchain verification. Bootstrapped with create-next-app, this project enables event organizers to mint NFT-based tickets and attendees to receive, verify, and use them securely.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🔧 Current Functionality
+The platform currently supports:
 
-* [X] Multi Ticket Minting in NFT
-* [ ] Nft sending when the user signes up
-* [ ] ~~Reselling Allowed, or not in create page freeze the assets is reselling is not allowed~~ [Not Planned]
-* [ ] ~~Create a reselling zone where people can buy the reselling tokens~~ [Not Planned]
-* [ ] Certificates Should be sent when the event is over the Event owner can mint the Certificates of Participation....
-* [ ] Asset Metadata and the creator address verification while "Check In"
-* [ ] Sign the payload with your private key, Combine the payload and signature, and generate a QR code from the combined JSON
-* [ ] Ticket Verification (Check-In App), Scan and decode the QR code to extract the payload and signature, Use the known public key to verify the signature against the payload,If valid, the ticket is confirmed as genuine and untampered
-* [X] Change /events its kinda bad design, Add Free Ticket also in /create
-* [ ] Add map location in /create
-* [X] A Tab where /host events should be there where shows what all events are hosted
-* [ ] /calendars should show what all events you subscribe /have tickets of
+Multi-ticket minting, allowing organizers to issue multiple NFTs per event.
+
+Automatic NFT delivery when users sign up for events—tickets are sent to their wallet.
+
+QR-based verification at check-in: each NFT generates a signed payload, which is encoded into a QR code. The payload is then verified using a known public key to ensure ticket authenticity.
+
+Post-event certification: After an event ends, organizers can mint and send certificates of participation as NFTs.
+
+These features ensure secure ticket distribution and validation while offering immutable proof of participation.
+
+Technical Highlights-
+Cryptographic Signatures: Tickets are verified using a signed payload and a QR code. The check-in process decodes the QR and validates the signature with a public key.
+
+Metadata Verification: Ticket check-ins verify metadata integrity and the creator's address to prevent forgery.
+
+ Planned Enhancements
+Several improvements and new features are planned to expand the platform’s capabilities:
+
+Resell Restrictions: Option to freeze NFTs to prevent reselling when creating an event (not yet implemented).
+
+Reselling Marketplace: A zone where users can list and buy secondary-market tickets (not yet implemented).
+
+Map Integration: Ability to add physical locations using maps in the event creation flow.
+
+Free Ticket Support: Users will be able to issue free tickets from the creation interface.
+
+Organizer Dashboard (/host): A new tab that lists all events created by the user.
+
+User Calendar (/calendars): This page will display all events for which the user has tickets or subscriptions.
+
+Improved Event Listing: The current /events design is slated for a revamp to improve usability and aesthetics.
